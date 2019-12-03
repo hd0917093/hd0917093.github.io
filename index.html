@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+    Final Project: Racing Games
+    Author: Hieu Dang
+    Date:   11/30/2019
+
+    Filename: index.html
+   -->
+   
+	<title>Car Racing Games</title>
+    <meta charset="utf-8" />
+    <link href="race_base.css" rel="stylesheet"  />
+    <link href="race_layout.css" rel="stylesheet"  />
+    <!--<script src="race_object.js" defer></script>-->
+    <script src="race_main.js" defer></script> 
+
+</head>
+
+<body>
+    <header>
+		<img src="racingLogo.png" alt="Racing Logo" />       
+	</header>                                             
+
+	<section id="main">
+		<div id="raceArea">
+			<p class="empty"></p>
+			<p class="empty"></p>
+			<img id="car1" class="car" src="car1.png" />
+			<p class="empty"></p>
+			<img id="car2" class="car" src="car2.png" />
+			<p class="empty"></p>
+			<p class="empty"></p>
+		</div>
+		<div id="button">
+			<div>
+				<label id="labelLight" for="trafficLight">CLICK TO START</label>
+				<img src="redLight.png" alt="Red Light" id="trafficLight"/>
+			</div>
+			<div id="winnerPicture"></div>
+			
+		</div> 
+			
+	</section>   
+	 
+      
+	<footer>
+		<p>Car Racing Games &copy; 2019 All Rights Reserved</p>
+	</footer>      
+	
+</body>
+</html>

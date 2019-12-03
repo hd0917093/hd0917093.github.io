@@ -1,0 +1,143 @@
+@charset "utf-8";
+/*
+    Final Project: Racing Games
+    Author: Hieu Dang
+    Date:   11/30/2019
+
+    Filename: race_layout.css
+*/
+
+
+/* HTML and Body Styles */
+
+html {
+   font-family: Verdana, Geneva, sans-serif;
+   font-size: 12px;
+   background-color: white;
+}
+
+body {
+   width: 1200px;
+   margin: 0px auto;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   background-repeat: no-repeat;
+   background-color: rgb(85, 183, 224);
+}
+
+section#main {
+	width: 100%;
+}
+
+/* Header Styles */
+
+body > header {
+   width: 100%;
+}
+
+body > header > img {
+   width: 100%;
+   display: block;
+}
+
+/*Race Area styles*/
+div#raceArea {
+	display: block;
+	width: 100%;
+	background: rgb(220, 255, 220) url(racingRoad.png) repeat;
+}
+
+
+/*Image styles*/
+img.car {
+	display: block;
+	height: 2em;
+	margin-top: 1em;
+	position: relative;	 			/*Set its absolute position so we can set object style.left to change its position*/
+}
+
+img.carPrep {
+	display: block;
+	border: 3.5px dotted gray;
+}
+
+/*Click button or image styles*/
+div#button {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+}
+
+div#button div {
+	-webkit-flex: 1 1 15px;
+	flex: 1 1 15px;
+}
+
+img#trafficLight{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* button#restartButton {
+	height: 4em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.5em;
+} */
+
+div#button label {
+	height: 1em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 2em;
+	text-align: center;
+}
+
+div#winnerPicture {
+	
+}
+
+/* Paragraph Styles*/
+p.empty {
+	display: block;
+	height: 2.4em;
+	
+}
+
+/* p.instructions {
+	display: block;
+	font-size: 3em;
+	text-align: center;
+	color: green;
+	margin: 1em auto;	
+} */
+
+div#prepPlace > p {
+	font-size: 1.5em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+/* Footer Styles */
+
+footer {
+   width: 100%;
+   margin-top: 60px;
+}
+
+footer p {
+   color: rgb(211, 211, 211);
+   font-size: 0.9em;
+   text-align: center;
+   background-color: transparent;
+   margin: 0px;
+   padding: 20px 0px;
+   border-top: 4px double rgba(255, 255, 255, 0.4);
+}
+
