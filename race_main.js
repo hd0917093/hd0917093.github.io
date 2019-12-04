@@ -29,6 +29,7 @@ function startRace() {
 	console.log("change red light to green");
 	
 	myInterval = setInterval(raceProgress, 50);			/*Automatically call raceProgress function each 50ms*/
+	
 }
 
 
@@ -60,8 +61,20 @@ function move() {
 }
 
 /*Click traffice light function*/
-function startSignal() {
+/* function startSignal() {
 	document.getElementById("trafficLight").addEventListener("click", startRace);
+} */
+
+/*Remove start Signal*/
+function cancelSignal() {
+	console.log("Done.");
+	startRace();
+	document.getElementById("trafficLight").removeEventListener("click", cancelSignal);
+	}
+
+/*Click traffice light to start*/
+function startSignal() {
+	document.getElementById("trafficLight").addEventListener("click", cancelSignal);
 }
 
 /*Click winner image to reset*/
@@ -104,8 +117,6 @@ function checkWinner() {
 			console.log("Car 2 won");		
 			winnerNum = 2;
 			clearInterval(myInterval);				/*Clear setInterval()*/
-			/* var winnerImg = "<img class='winner' src='winner" + winnerNum + ".png' />"
-			document.getElementById("winnerPicture").insertAdjacentHTML("afterBegin", winnerImg); */
 			showWinner();
 		}
 	} else if (totDistance2 > totDistance1) {		/*Car 2 ran further than car 1*/
@@ -154,6 +165,8 @@ function resetRace() {
 	var imageDiv = document.getElementById("winnerPicture");
 	imageDiv.removeChild(imageDiv.childNodes[0]);
 	
+	//Reset start signal
+	startSignal();
 }
 	
 
