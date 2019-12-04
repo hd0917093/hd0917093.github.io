@@ -60,11 +60,6 @@ function move() {
 	return distance;
 }
 
-/*Click traffice light function*/
-/* function startSignal() {
-	document.getElementById("trafficLight").addEventListener("click", startRace);
-} */
-
 /*Remove start Signal*/
 function cancelSignal() {
 	console.log("Done.");
